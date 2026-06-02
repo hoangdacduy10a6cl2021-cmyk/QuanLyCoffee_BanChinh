@@ -20,5 +20,9 @@ namespace QL_CoffeeShop_Test.Controllers
             var trendingProducts = productRepository.GetTrendingProducts(); 
             return View(trendingProducts);
         }
+        public IActionResult Contact()
+        {
+            return View();
+        }
     }
 }

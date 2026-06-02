@@ -1,33 +1,32 @@
-﻿
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using QL_CoffeeShop_Test.Models;
 using QL_CoffeeShop_Test.Models.interfaces;
-namespace coffeeshop.Controllers
+
+namespace QL_CoffeeShop_Test.Controllers
 {
+    [Authorize]
     public class OrdersController : Controller
     {
         private IOrderRepository orderRepository;
         private IShoppingCartRepository shoppingCartRepository;
-        public OrdersController(IOrderRepository oderRepository,
-       IShoppingCartRepository shoppingCartRepossitory)
+
+        public OrdersController(IOrderRepository orderRepository,
+                                IShoppingCartRepository shoppingCartRepository)
         {
-            this.orderRepository = oderRepository;
-            this.shoppingCartRepository = shoppingCartRepossitory;
+            this.orderRepository = orderRepository;
+            this.shoppingCartRepository = shoppingCartRepository;
         }
+
         public IActionResult Checkout()
         {
             return View();
         }
+
         [HttpPost]
         public IActionResult Checkout(Order order)
         {
-            orderRepository.PlaceOrder(order);
-            shoppingCartRepository.ClearCart();
-
-            return RedirectToAction("CheckoutComplete");
-        }
-        public IActionResult CheckoutComplete()
-        {
+            // checkout logic
             return View();
         }
     }

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using QL_CoffeeShop_Test.Data;
 
@@ -11,9 +12,11 @@ using QL_CoffeeShop_Test.Data;
 namespace QL_CoffeeShop_Test.Migrations
 {
     [DbContext(typeof(CoffeeshopDbContext))]
-    partial class CoffeeshopDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260601031038_UpdateTrendingProducts")]
+    partial class UpdateTrendingProducts
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -322,7 +325,7 @@ namespace QL_CoffeeShop_Test.Migrations
                             IsTrendingProduct = true,
                             Name = "America",
                             Price = 25m,
-                            detail = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                            detail = "Lorem Ipsum..."
                         },
                         new
                         {
@@ -331,7 +334,7 @@ namespace QL_CoffeeShop_Test.Migrations
                             IsTrendingProduct = true,
                             Name = "Vietnam",
                             Price = 20m,
-                            detail = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                            detail = "Lorem Ipsum..."
                         },
                         new
                         {
@@ -340,7 +343,7 @@ namespace QL_CoffeeShop_Test.Migrations
                             IsTrendingProduct = true,
                             Name = "United Kingdom",
                             Price = 15m,
-                            detail = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                            detail = "Lorem Ipsum..."
                         },
                         new
                         {
@@ -349,7 +352,7 @@ namespace QL_CoffeeShop_Test.Migrations
                             IsTrendingProduct = false,
                             Name = "India",
                             Price = 15m,
-                            detail = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                            detail = "Lorem Ipsum..."
                         },
                         new
                         {
@@ -358,7 +361,7 @@ namespace QL_CoffeeShop_Test.Migrations
                             IsTrendingProduct = false,
                             Name = "Russian",
                             Price = 25m,
-                            detail = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                            detail = "Lorem Ipsum..."
                         },
                         new
                         {
@@ -367,7 +370,7 @@ namespace QL_CoffeeShop_Test.Migrations
                             IsTrendingProduct = false,
                             Name = "France",
                             Price = 35m,
-                            detail = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                            detail = "Lorem Ipsum..."
                         });
                 });
 
